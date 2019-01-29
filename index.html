@@ -38,6 +38,25 @@
                 #article {
                     padding-left:25px;
                 }
+
+                @media(max-width:800px){
+                  #grid {
+                    display: block;
+                  }
+                  #grid ul {
+                    border-right: none;
+                  }
+                  h1 {
+                      border-bottom: none;
+                  }
+                }
+
+                @media(max-width:600px){
+                    #ytb{
+                       width: 400px; 
+                    }
+                }
+
         </style>        
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132361955-1"></script>
@@ -53,6 +72,8 @@
     <body>
         <h1><a href="index.html">Liverpool</a></h1>
 
+     
+  
         <div id="grid">
                 <ul>
                     <li><a href="1.html">Salah</a></li>
@@ -62,10 +83,14 @@
 
              <div id="article">
                 <p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/m07P043zem8?list=PLR8DItC4f5xuHAUPYEHb15-lMpmLmB7x2"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
+                 <!--   <iframe width="560" height="315" src="https://www.youtube.com/embed/m07P043zem8?list=PLR8DItC4f5xuHAUPYEHb15-lMpmLmB7x2"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
+                    <iframe id="ytb" width="560" height="315" 
+                    src="http://www.youtube.com/embed/m07P043zem8?version=3&loop=1&playlist=m07P043zem8"
+                    frameborder-"0"></iframe>
+                </p>
+            
 
                 <h2>Liverpool</h2>
 
