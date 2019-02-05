@@ -2,62 +2,8 @@
 <html>
     <head>
         <title>Liverpool Player</title>
-        <meta charset="utf-8">
-        <style>
-                body {
-                    margin: 0;
-                }
-
-                a {
-                    color:red;
-                    text-decoration:none;
-                }
-
-                h1 {
-                    font-size:42px;
-                    text-align: center;
-                    border-bottom: 1px solid gray;
-                    padding-top: 10px;
-                    padding-bottom: 20px;
-                    margin: 0;
-                }
-
-                #grid ul {
-                    border-right: 1px solid gray;
-                    width: 100px;
-                    margin: 0;
-                    padding-top: 10px;
-                    padding-left: 52px;
-                }
-
-                #grid {
-                    display: grid;
-                    grid-template-columns: 150px 1fr;
-                }
-
-                #article {
-                    padding-left:25px;
-                }
-
-                @media(max-width:800px){
-                  #grid {
-                    display: block;
-                  }
-                  #grid ul {
-                    border-right: none;
-                  }
-                  h1 {
-                      border-bottom: none;
-                  }
-                }
-
-                @media(max-width:600px){
-                    #ytb{
-                       width: 400px; 
-                    }
-                }
-
-        </style>        
+        <meta charset="utf-8">            
+        <link rel="stylesheet" href="style.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132361955-1"></script>
 <script>
@@ -72,8 +18,33 @@
     <body>
         <h1><a href="index.html">Liverpool</a></h1>
 
-     
-  
+        <input type="button" id="day_night" value="night" onclick="
+            var pointbody = document.querySelector('body');
+            if(this.value == 'night'){
+                pointbody.style.backgroundColor='black';
+                pointbody.style.color='white';
+                this.value ='day'
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i++;
+                }
+
+
+            }else{
+                pointbody.style.backgroundColor='white';
+                pointbody.style.color='black';
+                this.value ='night'
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = 'red';
+                    i++;
+                }
+            }
+        ">
+
         <div id="grid">
                 <ul>
                     <li><a href="1.html">Salah</a></li>
