@@ -14,35 +14,54 @@
   gtag('config', 'UA-132361955-1');
 </script>
 
+<script>
+    var Links = {
+        setColor : function (color) {
+        var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < alist.length) {
+                        alist[i].style.color = color;
+                        i++;
+                    }
+                 }
+    }
+
+
+    var Body = {
+        setColor : function  (color) {
+        document.querySelector('body').style.color = color;
+        },
+
+        setBackgroundColor : function (color)  {
+        document.querySelector('body').style.backgroundColor = color;
+        }
+    }             
+
+  
+    function dayNightHandler(self){    
+        var pointbody = document.querySelector('body');
+                if(self.value == 'night'){
+                    Body.setBackgroundColor('black');
+                    Body.setColor('white');
+                    self.value ='day'
+                    Links.setColor('powderblue');
+
+
+                }else{
+                    Body.setBackgroundColor('white');
+                    Body.setColor('black');
+                    self.value ='night'
+                    Links.setColor('red');
+                }
+            }
+</script>
+
     </head>    
     <body>
         <h1><a href="index.html">Liverpool</a></h1>
 
         <input type="button" id="day_night" value="night" onclick="
-            var pointbody = document.querySelector('body');
-            if(this.value == 'night'){
-                pointbody.style.backgroundColor='black';
-                pointbody.style.color='white';
-                this.value ='day'
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    i++;
-                }
-
-
-            }else{
-                pointbody.style.backgroundColor='white';
-                pointbody.style.color='black';
-                this.value ='night'
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length) {
-                    alist[i].style.color = 'red';
-                    i++;
-                }
-            }
+            dayNightHandler(this);    
         ">
 
         <div id="grid">
@@ -53,11 +72,11 @@
                 </ul>
 
              <div id="article">
-                <p>
+             <!--   <p>
                     <iframe id="ytb" width="560" height="315" 
                     src="http://www.youtube.com/embed/m07P043zem8?version=3&loop=1&playlist=m07P043zem8"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
+                </p> -->
             
 
                 <h2>Liverpool</h2>
